@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #141414;
+  color: white;
+}
+
+p,
+h2,
+h3,
+h4{
+  text-shadow: #141414 10px 1px 10px;
+  font-weight: 700;
+}
+p{
+  font-size: 20px;
+}
+
+section{
+  margin: 0 auto;
+  .container{
+    width: 80%;
+  }
+}
+
+.card{
+  img{
+    width: 100%;
+  }
+}
+
+.film-info{
+  p{
+    margin: 0 auto;
+  }
+  img{
+    height: 600px;
+    margin: 0 auto;
+  }
+}
+  
+.embla {
+  overflow: hidden;
+  &:hover #carousel-button{
+    visibility: visible;
+  }
+  #carousel-button {
+    visibility: hidden;
+  }
+  .embla__container {
+    display: flex;
+    .embla__slide {
+      flex: 0 0 calc(100% / 7);
+      min-width: 0;
+    }
+  }
+}
+
+.user{
+  .user-logo{
+    height: 40px;
+    width: 40px;
+    background-color: grey;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+  }
+  &:hover .chevron{
+    transform: rotate(180deg);
+  }
+}
+
+.notifications{
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  background-color: red;
+  text-align: center;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.search-input{
+  transition: all 0.5s;
+}
