@@ -9,6 +9,7 @@ import Films from './pages/Films.jsx';
 import Series from './pages/Series.jsx';
 import Selected from './pages/Selected.jsx';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import Favorites from './pages/Favorites.jsx';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: '/series',
         element: <Series />
+      },
+      {
+        path: '/favorites',
+        element: <Favorites />
       },
       {
         path: ':movie/:selectedMovie',

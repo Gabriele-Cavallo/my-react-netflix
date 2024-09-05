@@ -26,7 +26,7 @@ export default function CarouslForGenre({genre, type}) {
         fetchFilmsByGenre()
     }, [genre, type])
 
-    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
+    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'start' })
 
     useEffect(() => {
         if (emblaApi) {
@@ -44,24 +44,24 @@ export default function CarouslForGenre({genre, type}) {
 
     return (
         <>
-            <div className="embla relative px-10 mb-10" ref={emblaRef}>
-                <ul className="px-3 films-wrapper h-[300px] flex gap-4 embla__container">
+            <div className="embla relative mb-10" ref={emblaRef}>
+                <ul className="px-3 h-[300px] flex gap-4 embla__container">
                     {filmsByGenre.length > 0 && filmsByGenre.map(film => 
                         <CarouselCard type={type} dataInfo={film} key={film.id} />
                     )}
                 </ul>
                 <div id="carousel-button">
-                        <button className="absolute translate-y-[-50%] top-[50%] left-[20px] embla__prev bg-transparent text-white p-5" onClick={scrollPrev}>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-16">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-                            </svg>
-                        </button>     
-                        <button className="absolute translate-y-[-50%] top-[50%] right-[20px] embla__next bg-transparent text-white p-5" onClick={scrollNext}>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-16">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                            </svg>
-                        </button>
-                    </div>
+                    <button className="absolute translate-y-[-50%] top-[50%] left-[20px] embla__prev bg-transparent text-white p-5" onClick={scrollPrev}>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-16">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                        </svg>
+                    </button>     
+                    <button className="absolute translate-y-[-50%] top-[50%] right-[20px] embla__next bg-transparent text-white p-5" onClick={scrollNext}>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-16">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </button>
+                </div>
             </div>
         </>
     )

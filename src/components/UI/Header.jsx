@@ -51,6 +51,9 @@ export default function Header() {
                         <li>
                             <NavLink onClick={resetSearchBar} className={({isActive}) => isActive ? 'text-red-700 font-bold' : 'text-white'} to={'/series'}>Series</NavLink>
                         </li>
+                        <li>
+                            <NavLink onClick={resetSearchBar} className={({isActive}) => isActive ? 'text-red-700 font-bold' : 'text-white'} to={'/favorites'}>Favorites</NavLink>
+                        </li>
                     </ul>
                 </nav>
             </div>

@@ -10,7 +10,7 @@ export default function CarouselCard({dataInfo, type}) {
                 show: { opacity: 1, x: 0 }
             }}
             transition={{ duration: 1, ease: 'easeOut'}}
-            className="embla__slide h-auto rounded-lg overflow-hidden bg-slate-950">
+            className="embla__slide h-auto rounded-lg overflow-hidden bg-slate-950 relative">
                 <Link to={`/${type}/${dataInfo.id}`}>
                     <img className="object-fill h-full w-full" src={`https://image.tmdb.org/t/p/original${dataInfo.poster_path ? dataInfo.poster_path : dataInfo.backdrop_path }`} alt={dataInfo.title} />
                 </Link>
