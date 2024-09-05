@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-import { fetchPopularFilms } from "../util/http";
-import DetailsCard from "../components/DetailsCard";
+import { fetchPopularFilms } from "../../util/http";
+import DetailsCard from "../UI/DetailsCard";
 import { motion } from "framer-motion";
 
 export default function PopularFilms(){

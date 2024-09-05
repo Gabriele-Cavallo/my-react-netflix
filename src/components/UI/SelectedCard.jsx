@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { apiKey } from "../apiKey";
+import { apiKey } from "../../apiKey";
 import { useParams } from "react-router-dom";
 
 

@@ -1,10 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
-import VideoJumbotron from "../components/VideoJumbotron";
+import VideoJumbotron from "../components/UI/VideoJumbotron";
 import { fetchTvGenres } from "../util/http";
-import CarouslForGenre from "../components/CarouslForGenre";
+import CarouslForGenre from "../components/carousel/CarouslForGenre";
 import { useContext } from 'react';
 import { SearchInputContext } from '../store/context';
-import SearchedResults from "../components/SearchedResults";
+import SearchedResults from "../components/catalogues/SearchedResults";
 
 export default function Series() {
     const inputContext = useContext(SearchInputContext);

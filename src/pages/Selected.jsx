@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import SelectedCard from "../components/SelectedCard";
+import SelectedCard from "../components/UI/SelectedCard";
 import { fetchPopularFilms } from "../util/http";
 import { useQuery } from "@tanstack/react-query";
 

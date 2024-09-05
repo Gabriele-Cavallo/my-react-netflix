@@ -1,10 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchGenres } from "../util/http";
-import CarouslForGenre from "../components/CarouslForGenre";
-import VideoJumbotron from "../components/VideoJumbotron";
+import CarouslForGenre from "../components/carousel/CarouslForGenre";
+import VideoJumbotron from "../components/UI/VideoJumbotron";
 import { useContext } from 'react';
 import { SearchInputContext } from '../store/context';
-import SearchedResults from "../components/SearchedResults";
+import SearchedResults from "../components/catalogues/SearchedResults";
 
 export default function Films() {
     const inputContext = useContext(SearchInputContext);

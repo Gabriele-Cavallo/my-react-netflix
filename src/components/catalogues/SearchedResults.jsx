@@ -1,6 +1,6 @@
-import CarouselCard from "./CarouselCard";
+import CarouselCard from "../carousel/CarouselCard.jsx";
 import { useContext } from 'react';
-import { SearchInputContext } from '../store/context';
+import { SearchInputContext } from '../../store/context';
 
 export default function SearchedResults() {
     const inputContext = useContext(SearchInputContext);

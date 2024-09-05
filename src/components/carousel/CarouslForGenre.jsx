@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
-import { apiKey } from "../apiKey";
-import CarouselCard from "./CarouselCard";
+import { apiKey } from "../../apiKey";
+import CarouselCard from "../carousel/CarouselCard";
 import useEmblaCarousel from 'embla-carousel-react'
 
 

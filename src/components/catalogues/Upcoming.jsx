@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-import { upcomingMovie } from "../util/http";
-import Carousel from "./Carousel";
+import { upcomingMovie } from "../../util/http";
+import Carousel from "../carousel/Carousel";
 
 export default function Upcoming(){
     const {data, isLoading, isError, error} = useQuery({

@@ -1,10 +1,10 @@
-import PopularFilms from "../components/PopularFilms";
-import PopularSeries from "../components/PopularSeries";
-import Upcoming from "../components/Upcoming";
-import VideoJumbotron from "../components/VideoJumbotron";
+import PopularFilms from "../components/catalogues/PopularFilms";
+import PopularSeries from "../components/catalogues/PopularSeries";
+import Upcoming from "../components/catalogues/Upcoming";
+import VideoJumbotron from "../components/UI/VideoJumbotron";
 import { useContext } from 'react';
 import { SearchInputContext } from '../store/context';
-import SearchedResults from "../components/SearchedResults";
+import SearchedResults from "../components/catalogues/SearchedResults";
 
 export default function Home() {
     const inputContext = useContext(SearchInputContext);

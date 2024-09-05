@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-import { fetchPopularSeries } from "../util/http";
-import DetailsCard from "./DetailsCard";
+import { fetchPopularSeries } from "../../util/http";
+import DetailsCard from "../UI/DetailsCard";
 import { motion } from "framer-motion";
 
 

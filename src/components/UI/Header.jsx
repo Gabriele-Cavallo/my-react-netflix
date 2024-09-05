@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { SearchInputContext } from "../store/context";
+import { SearchInputContext } from "../../store/context";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function Header() {
