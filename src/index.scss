@@ -48,7 +48,7 @@ section{
 }
   
 .embla {
-  // overflow: hidden;
+  overflow: hidden;
   &:hover #carousel-button{
     visibility: visible;
   }
@@ -58,7 +58,7 @@ section{
   .embla__container {
     display: flex;
     .embla__slide {
-      flex: 0 0 calc(100% / 7);
+      flex: 0 0 calc(100% / 7.24);
       min-width: 0;
     }
   }

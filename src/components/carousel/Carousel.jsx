@@ -30,7 +30,7 @@ export default function Carousel({data, type}){
                     initial="hidden"
                     animate="show"
                     viewport={{ once: true}}
-                    className="px-3 films-wrapper h-[300px] flex gap-4 embla__container">
+                    className="px-3 films-wrapper  h-[12vw] flex gap-4 embla__container">
                     {data.map(upcoming => 
                         <CarouselCard
                             type={type}

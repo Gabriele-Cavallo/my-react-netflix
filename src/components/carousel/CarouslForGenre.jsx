@@ -45,7 +45,7 @@ export default function CarouslForGenre({genre, type}) {
     return (
         <>
             <div className="embla relative mb-10" ref={emblaRef}>
-                <ul className="px-3 h-[300px] flex gap-4 embla__container">
+                <ul className="px-3  h-[12vw] flex gap-4 embla__container">
                     {filmsByGenre.length > 0 && filmsByGenre.map(film => 
                         <CarouselCard type={type} dataInfo={film} key={film.id} />
                     )}

@@ -28,7 +28,7 @@ export default function Series() {
 
     if(data){
         content = data.map(genre => <div className="last:pb-40"  key={genre.id}>
-            <h2 className="font-bold text-3xl ps-2 mb-3">{genre.name}</h2>
+            <h2 className="font-bold text-3xl mb-3">{genre.name}</h2>
             <CarouslForGenre type={'tv'} genre={genre.id} />
         </div>)
     }
