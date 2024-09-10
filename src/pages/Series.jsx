@@ -5,6 +5,8 @@ import CarouslForGenre from "../components/carousel/CarouslForGenre";
 import { useContext } from 'react';
 import { SearchInputContext } from '../store/context';
 import SearchedResults from "../components/catalogues/SearchedResults";
+import Footer from '../components/UI/Footer'
+
 
 export default function Series() {
     const inputContext = useContext(SearchInputContext);
@@ -39,8 +41,9 @@ export default function Series() {
                 <section className="px-10 relative">
                     <VideoJumbotron trailerKey={'jFBeY-xr30Y'} />
                     <div className="relative top-[65vh] z-10">
-                            {content}
+                        {content}
                     </div>
+                    <Footer />
                 </section> :
                 <SearchedResults />
             }

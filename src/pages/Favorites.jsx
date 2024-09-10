@@ -3,6 +3,8 @@ import {FavoritesContext} from '../store/favorites';
 import DetailsCard from "../components/UI/DetailsCard";
 import SearchedResults from "../components/catalogues/SearchedResults";
 import { SearchInputContext } from '../store/context';
+import Footer from '../components/UI/Footer'
+
 
 export default function Favorites() {
     const favoritesContext  = useContext(FavoritesContext);
@@ -24,6 +26,7 @@ export default function Favorites() {
                     </ul> :
                     <p>Non hai ancora nessun preferito!</p>
                     }
+                    <Footer />
                 </section>:
                 <SearchedResults />
             }

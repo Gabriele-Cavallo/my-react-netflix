@@ -1,9 +1,10 @@
 import { useContext, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { SearchInputContext } from "../../store/context";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-export default function Header() {
+export default function Header({userLogged, onUserLogin}) {
+    const navigate = useNavigate();
     const { scrollY } = useScroll();
     const headerBackgroundColor = useTransform(scrollY, [0, 80], ["#ff000000", "black"]);
     
@@ -11,6 +12,12 @@ export default function Header() {
 
     const [openDropDown, setOpenDropDown ] = useState(false);
     const [ openSearchBar, setOpenSearchBar] = useState(false);
+
+    function handleLogout(){
+        onUserLogin('');
+        resetSearchBar();
+        navigate('/');
+    }
 
     function handleDropDown(){
         setOpenDropDown(prevState => !prevState)
@@ -39,11 +46,11 @@ export default function Header() {
     return (
         <motion.header style={{ backgroundColor: headerBackgroundColor }} id="header" className="ps-5 pe-10 flex justify-between items-center max-h-[80px] gap-10 h-full top-0 left-0 z-20 bg-gradient-to-b from-black to-transparent fixed w-full transition-all duration-1000">
             <div className="flex gap-10">
-                <h2>Ciao sono l'header</h2>
+                <div className="cursor-pointer" onClick={handleLogout}>Login</div>
                 <nav>
                     <ul className="font-semibold text-lg flex justify-center gap-10">
                         <li>
-                            <NavLink onClick={resetSearchBar} className={({isActive}) => isActive ? 'text-red-700 font-bold' : 'text-white'} to={'/'}>Home</NavLink>
+                            <NavLink onClick={resetSearchBar} className={({isActive}) => isActive ? 'text-red-700 font-bold' : 'text-white'} to={'/home'}>Home</NavLink>
                         </li>
                         <li>
                             <NavLink onClick={resetSearchBar} className={({isActive}) => isActive ? 'text-red-700 font-bold' : 'text-white'} to={'/films'}>Films</NavLink>
@@ -58,6 +65,7 @@ export default function Header() {
                 </nav>
             </div>
             <menu className="flex gap-5 items-center">
+                <div>{userLogged}</div>
                 {!openSearchBar ? 
                     <div onClick={handleSearchBar} className="flex">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">

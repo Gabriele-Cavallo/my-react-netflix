@@ -10,6 +10,7 @@ import Series from './pages/Series.jsx';
 import Selected from './pages/Selected.jsx';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Favorites from './pages/Favorites.jsx';
+import Login from './pages/Login.jsx';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
+        element: <Login />
+      },
+      {
+        path: '/home',
         element: <Home />
       },
       {

@@ -5,6 +5,8 @@ import VideoJumbotron from "../components/UI/VideoJumbotron";
 import { useContext } from 'react';
 import { SearchInputContext } from '../store/context';
 import SearchedResults from "../components/catalogues/SearchedResults";
+import Footer from '../components/UI/Footer'
+
 
 export default function Films() {
     const inputContext = useContext(SearchInputContext);
@@ -41,6 +43,7 @@ export default function Films() {
                 <div className="relative top-[65vh] z-10">
                     {content}
                 </div>
+                <Footer />
             </section> :
             <SearchedResults />
         }
